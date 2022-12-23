@@ -4,12 +4,12 @@ import streamlit as st
 import openai
 import os
 import pandas as pd
-st.write(st.experimental_user)
-ADMIN_USERS = {
-    'judesajith.aj@gmail.com',
-    'person2@email.com',
-    'person3@email.com'
-}
+# st.write(st.experimental_user)
+# ADMIN_USERS = {
+#     'judesajith.aj@gmail.com',
+#     'person2@email.com',
+#     'person3@email.com'
+# }
 # if :
 # data = {'url': [''], 'algo':['']}
 df = pd.DataFrame(columns=['url', 'algo','contrib','LR','ref','tech'])
@@ -21,10 +21,10 @@ if "df_result" not in st.session_state:
     
 
 
-if st.experimental_user.email in ADMIN_USERS:
-    max = 10000
-else:
-    max = 5
+# if st.experimental_user.email in ADMIN_USERS:
+#     max = 10000
+# else:
+max = 5
 
 if "max_tries" not in st.session_state:
     st.session_state['max_tries'] = max
