@@ -14,10 +14,8 @@ df = pd.DataFrame(data)
 if 'state' not in st.session_state:
     st.session_state.state = df
 
-def add(url,x):
-    df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
-    st.session_state.state = st.session_state.append(df_addrow, ignore_index=True)
-    return st.session_state.state
+# def add(url,x):
+    
 
 
 
@@ -42,12 +40,13 @@ x = str(response.choices[0].text)
 # st.write(response)
 
 if st.button("add"):
-    c = add(url1,x)
+    df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
+    st.session_state.state = st.session_state.append(df_addrow, ignore_index=True)
 
 
 
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
 
-    st.write(c)
+    st.write(st.session_state.state)
 
