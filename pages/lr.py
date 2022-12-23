@@ -41,7 +41,7 @@ x = str(response.choices[0].text)
 
 if st.button("add"):
     df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
-    st.session_state.state = st.session_state.append(df_addrow, ignore_index=True)
+    st.session_state.state = df.append(df_addrow, ignore_index=True)
 
 
 
