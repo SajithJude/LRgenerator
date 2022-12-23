@@ -72,4 +72,4 @@ if st.button("add"):
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
 # @st.cache
-st.dataframe(st.session_state['df_result'])
+st.table(st.session_state['df_result'])
