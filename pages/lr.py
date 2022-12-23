@@ -21,7 +21,7 @@ url1= st.text_input("enter the url of the research paper")
 
 openai.api_key =  os.getenv("APIKEY")
 
-if st.button("generate")
+if st.button("generate"):
     response = openai.Completion.create(
     model="text-davinci-002",
     prompt="what are the algorithms used in this publication :" + url1  +" .",
