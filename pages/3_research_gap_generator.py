@@ -25,7 +25,7 @@ try:
         )
         st.subheader("Research Gap")
         st.write(gap.choices[0].text)
-    x = str(gap.choices[0].text)
+        # x = str(gap.choices[0].text)
     # for link in links:
 
 except:
