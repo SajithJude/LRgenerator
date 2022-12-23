@@ -8,9 +8,10 @@ import pandas as pd
 openai.api_key =  os.getenv("APIKEY")
 
 try:
-    links = st.session_state['df_result']['url']
-    st.write(links)
+    
     if st.button("generate Research Gap from Urls in table"):
+        links = st.session_state['df_result']['url']
+        st.write(links)
     # st.session_state['max_tries']  = st.session_state['max_tries']  -1
     # if st.session_state['max_tries'] >0:
         gap = openai.Completion.create(
