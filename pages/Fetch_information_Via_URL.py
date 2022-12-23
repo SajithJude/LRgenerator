@@ -38,7 +38,7 @@ url1= st.text_input("enter the url of the research paper")
 
 openai.api_key =  os.getenv("APIKEY")
 
-if st.button("generate and add to table"):
+if st.button("generate and add to table") and len(url1)>0:
     st.session_state['max_tries']  = st.session_state['max_tries']  -1
     if st.session_state['max_tries'] >0:
         response = openai.Completion.create(
