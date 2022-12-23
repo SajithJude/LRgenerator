@@ -21,7 +21,7 @@ url1= st.text_input("enter the url of the research paper")
 
 openai.api_key =  os.getenv("APIKEY")
 
-if st.button("generate"):
+if st.button("generate and add to table"):
     response = openai.Completion.create(
     model="text-davinci-002",
     prompt="what are the algorithms used in this publication :" + url1  +" .",
@@ -90,4 +90,4 @@ if st.button("generate"):
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
 # @st.cache
-st.table(st.session_state['df_result'])
+# st.table(st.session_state['df_result'])
