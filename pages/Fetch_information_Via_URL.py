@@ -4,7 +4,12 @@ import streamlit as st
 import openai
 import os
 import pandas as pd
-
+ADMIN_USERS = {
+    'judesajith.aj@gmail.com',
+    'person2@email.com',
+    'person3@email.com'
+}
+# if :
 # data = {'url': [''], 'algo':['']}
 df = pd.DataFrame(columns=['url', 'algo','contrib','LR','ref','tech'])
 # st.text("#adjust the slider  to fine tune the number of questions you want in the output")
@@ -29,7 +34,7 @@ openai.api_key =  os.getenv("APIKEY")
 
 if st.button("generate and add to table"):
     st.session_state['max_tries']  = st.session_state['max_tries']  -1
-    if st.session_state['max_tries'] >0:
+    if st.session_state['max_tries'] >0 or st.experimental_user.email in ADMIN_USERS:
         response = openai.Completion.create(
         model="text-davinci-002",
         prompt="what are the algorithms used in this publication :" + url1  +" .",
