@@ -19,7 +19,12 @@ if "df_result" not in st.session_state:
 # def add(url,x):
     
 
-max = 5
+
+if st.experimental_user.email in ADMIN_USERS:
+    max = 10000
+else:
+    max = 5
+    
 if "max_tries" not in st.session_state:
     st.session_state['max_tries'] = max
 if  st.session_state['max_tries'] >0:
@@ -34,7 +39,7 @@ openai.api_key =  os.getenv("APIKEY")
 
 if st.button("generate and add to table"):
     st.session_state['max_tries']  = st.session_state['max_tries']  -1
-    if st.session_state['max_tries'] >0 or st.experimental_user.email in ADMIN_USERS:
+    if st.session_state['max_tries'] >0:
         response = openai.Completion.create(
         model="text-davinci-002",
         prompt="what are the algorithms used in this publication :" + url1  +" .",
