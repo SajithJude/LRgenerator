@@ -18,7 +18,7 @@ max = 5
 if "max_tries" not in st.session_state:
     st.session_state['max_tries'] = max
 
-st.caption("You have "+str(st.session_state['max_tries'])+ " free clicks left")
+st.caption("You have "+str(st.session_state['max_tries']-1)+ " free clicks left")
 
 
 url1= st.text_input("enter the url of the research paper")
