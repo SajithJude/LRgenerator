@@ -3,26 +3,15 @@ import streamlit as st
 
 import openai
 import os
+import pandas as pd
 
-@st.cache
-def get_input_list():
-  return []
-
-
-st.title("Input title of the reasearch papers")
-num =   st.slider("how many questions do you want to generate ?",min_value=5,max_value=30)
-
-for i in range(num):
-    user_input = "user_input_" + str(i)
-    user_input  = st.text_input("enter the url of the research paper")
-    input_list = get_input_list()
-    input_list.append(user_input)
-    
-
-st.write('The list is now :', input_list)
+data = {'url': [''], 'algo':['']}
+df = pd.DataFrame(data)
 # st.text("#adjust the slider  to fine tune the number of questions you want in the output")
 
-url= st.text_input("enter the url of the research paper")
+url1= st.text_input("enter the url of the research paper")
+
+
 
 if st.button("Analyze"):
 
@@ -32,7 +21,7 @@ if st.button("Analyze"):
 
     response = openai.Completion.create(
     model="text-davinci-002",
-    prompt="what are the algorithms used in this publication :" + url  +" .",
+    prompt="what are the algorithms used in this publication :" + url1  +" .",
     temperature=0.56,
     max_tokens=3600,
     top_p=1,
@@ -41,4 +30,11 @@ if st.button("Analyze"):
     # stop=["\n"]
     )
     st.write(response.choices[0].text)
-    st.write(response)
+    # st.write(response)
+
+add = st.button("add result")
+if add:
+    df['url'] = url1
+    df['algo'] = response.choices[0].text
+
+    st.write(df)
