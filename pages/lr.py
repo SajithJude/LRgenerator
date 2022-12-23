@@ -16,7 +16,7 @@ url1= st.text_input("enter the url of the research paper")
 if st.button("Analyze"):
 
 
-    openai.api_key =  os.getenv("OPENAI_API_KEY")
+    openai.api_key =  os.getenv("APIKEY")
 
 
     response = openai.Completion.create(
