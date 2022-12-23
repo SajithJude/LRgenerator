@@ -5,5 +5,6 @@ import streamlit as st
 # st.text("#adjust the slider  to fine tune the number of questions you want in the output")
 if "df_result" not in st.session_state:
     st.session_state['df_result'] = "no data"
+    st.write("No Data, Generate some information in Fetch Information page to add data")
 
 st.table(st.session_state['df_result'])
