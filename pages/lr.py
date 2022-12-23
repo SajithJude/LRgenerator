@@ -16,7 +16,7 @@ if 'state' not in st.session_state:
 
 def add(url,x):
     df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
-    state.df = state.df.append(df_addrow, ignore_index=True)
+    st.session_state.state = st.session_state.df.append(df_addrow, ignore_index=True)
     return df
 
 
