@@ -17,8 +17,8 @@ try:
     # if st.session_state['max_tries'] >0:
         gap = openai.Completion.create(
         model="text-davinci-002",
-        prompt="Generate information on the research gap by analysing the following publications :" + links,
-        temperature=0.56,
+        prompt="Generate comprehensive information on the research gap by analysing the following publications :" + links,
+        temperature=0.86,
         max_tokens=3600,
         top_p=1,
         frequency_penalty=0.35,
