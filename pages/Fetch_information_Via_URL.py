@@ -6,7 +6,7 @@ import os
 import pandas as pd
 
 # data = {'url': [''], 'algo':['']}
-df = pd.DataFrame(columns=['url', 'algo','contrib','LR','ref'])
+df = pd.DataFrame(columns=['url', 'algo','contrib','LR','ref','tech'])
 # st.text("#adjust the slider  to fine tune the number of questions you want in the output")
 if "df_result" not in st.session_state:
     st.session_state['df_result'] = df
@@ -81,8 +81,22 @@ if st.button("generate and add to table"):
     st.write(ref.choices[0].text)
     rx = str(ref.choices[0].text)
 
+    tech = openai.Completion.create(
+    model="text-davinci-002",
+    prompt="What are the tools and technologies used this publication :" + url1  +" .",
+    temperature=0.56,
+    max_tokens=3600,
+    top_p=1,
+    frequency_penalty=0.35,
+    presence_penalty=0,
+    # stop=["\n"]
+    )
+    st.subheader("Tools and Technologies")
+    st.write(tech.choices[0].text)
+    tx = str(tech.choices[0].text)
+
     
-    df_addrow = pd.DataFrame([[url1, x,cx,lx,rx]], columns=['url', 'algo','contrib','LR','ref'])
+    df_addrow = pd.DataFrame([[url1, x,cx,lx,rx,tx]], columns=['url', 'algo','contrib','LR','ref','tech'])
     st.session_state['df_result'] = st.session_state['df_result'].append(df_addrow, ignore_index=True)
 
 
