@@ -25,7 +25,7 @@ openai.api_key =  os.getenv("APIKEY")
 
 if st.button("generate and add to table"):
     max = max -1
-    if len(max)>0:
+    if max>0:
         response = openai.Completion.create(
         model="text-davinci-002",
         prompt="what are the algorithms used in this publication :" + url1  +" .",
