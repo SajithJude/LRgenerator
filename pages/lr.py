@@ -48,5 +48,5 @@ if st.button("add"):
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
 
-    st.write(st.session_state.state)
+st.write(st.session_state.state)
 
