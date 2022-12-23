@@ -54,7 +54,7 @@ if st.button("generate and add to table"):
 
     lrd = openai.Completion.create(
     model="text-davinci-002",
-    prompt="Generate information for literature review from this publication :" + url1  +" .",
+    prompt="Generate information for literature review around the novel contribution from this publication :" + url1  +" .",
     temperature=0.56,
     max_tokens=3600,
     top_p=1,
@@ -62,7 +62,7 @@ if st.button("generate and add to table"):
     presence_penalty=0,
     # stop=["\n"]
     )
-    st.subheader("Literature Reveiw on Novel Contribution")
+    st.subheader("Literature Review on Novel Contribution")
     st.write(lrd.choices[0].text)
     lx = str(lrd.choices[0].text)
     # st.write(response)
