@@ -35,6 +35,6 @@ if st.button("Analyze"):
 add = st.button("add result")
 if add:
     df['url'] = url1
-    df['algo'] = response.choices[0].text
+    df['algo'] = str(response.choices[0].text)
 
     st.write(df)
