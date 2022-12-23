@@ -8,7 +8,7 @@ import pandas as pd
 # data = {'url': [''], 'algo':['']}
 df = pd.DataFrame(columns=['Column1', 'Column2'])
 # st.text("#adjust the slider  to fine tune the number of questions you want in the output")
-state = st.session_state 
+state = st.session_state.df
 
 # If the state object is empty, add the starting dataframe
 if state is None:
