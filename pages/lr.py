@@ -13,7 +13,8 @@ st.title("Input title of the reasearch papers")
 num =   st.slider("how many questions do you want to generate ?",min_value=5,max_value=30)
 
 for i in range(num):
-    user_input = st.text_input("enter the url of the research paper")
+    user_input = "user_input_" + str(i)
+    user_input  = st.text_input("enter the url of the research paper")
     input_list = get_input_list()
     input_list.append(user_input)
     
