@@ -13,6 +13,7 @@ df = pd.DataFrame(data)
 def add(url,x):
     df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
     df = df.append(df_addrow, ignore_index=True)
+    st.write(df)
     return df
 
 
@@ -46,5 +47,5 @@ if st.button("Analyze"):
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
 
-    st.write(df)
+# st.write(df)
 
