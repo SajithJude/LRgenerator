@@ -12,12 +12,12 @@ df = pd.DataFrame(data)
 
 # If the state object is empty, add the starting dataframe
 if 'state' not in st.session_state:
-    st.session_state.state = 'df'
+    st.session_state.state = df
 
 def add(url,x):
     df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
-    st.session_state.state = st.session_state.df.append(df_addrow, ignore_index=True)
-    return df
+    st.session_state.state = st.session_state.append(df_addrow, ignore_index=True)
+    return st.session_state.state
 
 
 
