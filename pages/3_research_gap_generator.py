@@ -10,7 +10,8 @@ openai.api_key =  os.getenv("APIKEY")
 try:
     
     if st.button("generate Research Gap from Urls in table"):
-        links = st.session_state['df_result']['url']
+        link = st.session_state['df_result']['url']
+        links = ','.join(link.tolist())
         st.write(links)
     # st.session_state['max_tries']  = st.session_state['max_tries']  -1
     # if st.session_state['max_tries'] >0:
