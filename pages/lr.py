@@ -6,13 +6,10 @@ import os
 import pandas as pd
 
 # data = {'url': [''], 'algo':['']}
-state = pd.DataFrame(columns=['Column1', 'Column2'])
+df = pd.DataFrame(columns=['url', 'algo'])
 # st.text("#adjust the slider  to fine tune the number of questions you want in the output")
-state = st.session_state.df
-
-# If the state object is empty, add the starting dataframe
-if state is None:
-    state.df = df
+if "df_result" not in st.session_state:
+    st.session_state['df_result'] = df
 
 # def add(url,x):
     
@@ -41,12 +38,11 @@ x = str(response.choices[0].text)
 
 if st.button("add"):
     df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
-    state.df = state.df.append(df_addrow, ignore_index=True)
+    st.session_state['df_result'] = st.session_state['df_result'].append(df_addrow, ignore_index=True)
 
 
 
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
-
-st.write(state.df)
-
+# @st.cache
+st.dataframe(st.session_state['df_result'])
