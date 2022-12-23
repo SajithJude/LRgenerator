@@ -17,8 +17,10 @@ if "df_result" not in st.session_state:
 max = 5
 if "max_tries" not in st.session_state:
     st.session_state['max_tries'] = max
-
-st.caption("You have "+str(st.session_state['max_tries']-1)+ " free clicks left")
+if  st.session_state['max_tries'] >0:
+    st.caption("You have "+str(st.session_state['max_tries']-1)+ " free clicks left")
+else:
+    st.caption("You have Finished your free Trial")
 
 
 url1= st.text_input("enter the url of the research paper")
