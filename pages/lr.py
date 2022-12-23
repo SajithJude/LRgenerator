@@ -81,9 +81,9 @@ if st.button("generate"):
     st.write(ref.choices[0].text)
     rx = str(ref.choices[0].text)
 
-    if st.button("add"):
-        df_addrow = pd.DataFrame([[url1, x,cx,lx,rx]], columns=['url', 'algo','contrib','LR','ref'])
-        st.session_state['df_result'] = st.session_state['df_result'].append(df_addrow, ignore_index=True)
+    
+    df_addrow = pd.DataFrame([[url1, x,cx,lx,rx]], columns=['url', 'algo','contrib','LR','ref'])
+    st.session_state['df_result'] = st.session_state['df_result'].append(df_addrow, ignore_index=True)
 
 
 
