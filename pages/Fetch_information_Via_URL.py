@@ -15,6 +15,8 @@ if "df_result" not in st.session_state:
     
 
 max = 5
+if "max_tries" not in st.session_state:
+    st.session_state['max_tries'] = max
 
 st.caption("You have "+str(max)+ " free clicks left")
 
@@ -24,8 +26,8 @@ url1= st.text_input("enter the url of the research paper")
 openai.api_key =  os.getenv("APIKEY")
 
 if st.button("generate and add to table"):
-    max = max -1
-    if max>0:
+    st.session_state['max_tries']  = st.session_state['max_tries']  -1
+    if st.session_state['max_tries'] >0:
         response = openai.Completion.create(
         model="text-davinci-002",
         prompt="what are the algorithms used in this publication :" + url1  +" .",
