@@ -37,4 +37,4 @@ if st.button("Analyze"):
         df['url'] = url1
         df['algo'] = str(response.choices[0].text)
 
-        st.write(df)
+    st.write(df)
