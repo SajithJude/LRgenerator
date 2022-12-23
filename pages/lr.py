@@ -11,8 +11,8 @@ df = pd.DataFrame(data)
 state = st.State() 
 
 # If the state object is empty, add the starting dataframe
-if state is None: 
-    state.df = df 
+if 'state' not in st.session_state:
+    st.session_state.state = 'df'
 
 def add(url,x):
     df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
@@ -50,5 +50,5 @@ if st.button("Analyze"):
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
 
-st.write(state.df)
+st.write(st.session_state.state)
 
