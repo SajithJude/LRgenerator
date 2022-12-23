@@ -5,14 +5,14 @@ import openai
 import os
 import pandas as pd
 
-data = {'url': [''], 'algo':['']}
-df = pd.DataFrame(data)
+# data = {'url': [''], 'algo':['']}
+df = pd.DataFrame(columns=['Column1', 'Column2'])
 # st.text("#adjust the slider  to fine tune the number of questions you want in the output")
-# state = st.State() 
+state = st.session_state 
 
 # If the state object is empty, add the starting dataframe
-if 'state' not in st.session_state:
-    st.session_state.state = df
+if state is None:
+    state.df = df
 
 # def add(url,x):
     
@@ -41,12 +41,12 @@ x = str(response.choices[0].text)
 
 if st.button("add"):
     df_addrow = pd.DataFrame([[url1, x]], columns=['url','algo'])
-    st.session_state.state = df.append(df_addrow, ignore_index=True)
+    state.df = state.df.append(df_addrow, ignore_index=True)
 
 
 
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
 
-st.write(st.session_state.state)
+st.write(state.df)
 
