@@ -32,8 +32,11 @@ if st.button("Analyze"):
     st.write(response.choices[0].text)
     # st.write(response)
 
-  
-    df['url'] = url1
-    df['algo'] = str(response.choices[0].text)
+    df_addrow = pd.DataFrame([[url1, str(response.choices[0].text)]], columns=['url','algo'])
+    df = df.append(df_addrow, ignore_index=True)
+
+
+    # df['url'].append(url1)
+    # df['algo'] = str(response.choices[0].text)
 
 st.write(df)
