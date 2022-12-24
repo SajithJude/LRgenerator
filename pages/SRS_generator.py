@@ -45,7 +45,7 @@ try:
 
         sthl = openai.Completion.create(
         model="text-davinci-002",
-        prompt="Generate information about the stakeholders for the software that does the following :" + links,
+        prompt="List down and Generate information about the stakeholders individually for a software that does the following :" + links,
         temperature=0.86,
         max_tokens=3600,
         top_p=1,
