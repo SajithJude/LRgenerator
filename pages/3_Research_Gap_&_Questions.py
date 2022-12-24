@@ -52,8 +52,8 @@ try:
             st.write(qus.choices[0].text)
 
     # for link in ink:
-        st.table(st.session_state['df_result'])
 except:
     st.write("No Data, Generate some information in Fetch Information page to add data")
+st.table(st.session_state['df_result'])
 
 
