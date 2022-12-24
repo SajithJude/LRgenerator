@@ -20,7 +20,7 @@ def addnode(x,y):
 
 list3=[]
 def addedge(a,b):
-    for i in range(len(a)):
+    for i in range(len(a)/2):
         h= random.choice(a)
         o= random.choice(b)
         string=h+o
