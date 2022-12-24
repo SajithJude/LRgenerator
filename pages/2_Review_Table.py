@@ -1,11 +1,13 @@
 import streamlit as st
 import pandas as pd
-# import graphviz
+import graphviz
+
+
+# Create a graphlib graph object
+graph = graphviz.Digraph()
 
 for index, row in st.session_state['df_result'].iterrows(): 
-    st.write(row['url'], row['ref'])
-# Create a graphlib graph object
-# graph = graphviz.Digraph()
+    graph.edge(row['url'], row['ref'])
 
 # graph.edge('run', 'intr')
 # graph.edge('intr', 'runbl')
@@ -21,7 +23,7 @@ for index, row in st.session_state['df_result'].iterrows():
 # graph.edge('new', 'runmem')
 # graph.edge('sleep', 'runmem')
 
-# st.graphviz_chart(graph)
+st.graphviz_chart(graph)
 
 try:
     st.table(st.session_state['df_result'])
