@@ -7,9 +7,14 @@ import graphviz
 graph = graphviz.Graph()
 
 for index, row in st.session_state['df_result'].iterrows(): 
-    graph.edge(row['name'], row['tech'])
-    graph.edge(row['algo'], row['name'])
-    graph.edge(row['tech'], row['algo'])
+    graph.node('n', row['name'])
+    graph.node('a', st.session_state['df_result']['algo'])
+    # graph.node('r', row['re'])
+
+    
+# graph.edge(row['name'], row['tech'])
+graph.edges(['na','an'])
+# graph.edges(row['tech'], row['algo'])
 
 
 
