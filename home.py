@@ -10,7 +10,7 @@ import streamlit as st
 
 st.markdown("# Genr8NId8")
 st.markdown("## Generate and Ideate Research papers and ideas")
-st.markdown("### Input the publication URL and let A.I do the majic")
+st.markdown("### Input the publication URL and let A.I do the magic")
 st.markdown("""
     
 This tool extracts information from the given URL for novel contributions, 
