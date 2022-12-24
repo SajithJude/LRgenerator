@@ -25,8 +25,9 @@ try:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Functional Requirements")
-        st.write(fr.choices[0].text)
+        # st.subheader("/")
+        with st.expander("View Functional Requirements"):
+            st.write(fr.choices[0].text)
 
         nfr = openai.Completion.create(
         model="text-davinci-002",
@@ -39,9 +40,8 @@ try:
         # stop=["\n"]
         )
         # st.subheader("Research nfr")
-        st.subheader("Non-Functional Requirements")
-
-        st.write(nfr.choices[0].text)
+        with st.expander("View Non-Functional Requirements"):
+            st.write(nfr.choices[0].text)
 
         sthl = openai.Completion.create(
         model="text-davinci-002",
