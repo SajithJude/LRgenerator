@@ -9,7 +9,7 @@ openai.api_key =  os.getenv("APIKEY")
 
 try:
     links = st.text_area("Describe how will your software will be used by an end user", placeholder="Eg: An app that enables the users to...")
-    if st.button("generate Functional/Non-Functional Requirements"):
+    if st.button("generate SRS"):
         # link = st.session_state['df_result']['url']
         # links = ', '.join(link.tolist())
         # st.write(links)
@@ -42,6 +42,21 @@ try:
         st.subheader("Non-Functional Requirements")
 
         st.write(nfr.choices[0].text)
+
+        sthl = openai.Completion.create(
+        model="text-davinci-002",
+        prompt="Generate information about the stakeholders for the software that does the following :" + links,
+        temperature=0.86,
+        max_tokens=3600,
+        top_p=1,
+        frequency_penalty=0.35,
+        presence_penalty=0,
+        # stop=["\n"]
+        )
+        # st.subheader("Research sthl")
+        st.subheader("Stakeholders information")
+
+        st.write(sthl.choices[0].text)
         # x = str(gap.choices[0].text)
     # for link in links:
 
