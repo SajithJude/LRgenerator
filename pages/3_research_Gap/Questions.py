@@ -9,7 +9,7 @@ openai.api_key =  os.getenv("APIKEY")
 
 try:
     
-    if st.button("gener8 Research Gap/Questions"):
+    if st.button("generate Research Gap/Questions"):
         link = st.session_state['df_result']['url']
         links = ', '.join(link.tolist())
         st.write(links)
@@ -25,8 +25,10 @@ try:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Research Gap")
-        st.write(gap.choices[0].text)
+        
+        # st.subheader("Research Gap")
+        with st.expander("View Research Gap"):
+            st.write(gap.choices[0].text)
         # x = str(gap.choices[0].text)
         # if st.button("generate research questions"):
             # link = st.session_state['df_result']['url']
@@ -45,8 +47,9 @@ try:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Research Questions")
-        st.write(qus.choices[0].text)
+        # st.subheader("Research Questions")
+        with st.expander("View Research Questions"):
+            st.write(qus.choices[0].text)
 
     # for link in ink:
 
