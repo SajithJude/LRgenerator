@@ -4,7 +4,7 @@ import graphviz
 
 
 # Create a graphlib graph object
-graph = graphviz.Digraph()
+graph = graphviz.Graph()
 
 for index, row in st.session_state['df_result'].iterrows(): 
     graph.edge(row['name'], row['ref'])
