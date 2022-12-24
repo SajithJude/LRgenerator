@@ -40,7 +40,7 @@ for i in range(len(list1)):
 
 
 for index, row in st.session_state['df_result'].iterrows(): 
-    graph.node('n', row['name'])
+    addnode(str(list2[i]), row['name'])
 
 # for i in range(4):
 #     addedge(list1,list2)
