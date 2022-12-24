@@ -18,7 +18,7 @@ for index in st.session_state['df_result']['name'].iteritems():
 
     
 # graph.edge(row['name'], row['tech'])
-graph.edges(['na','nt','nr'])
+# graph.edges(['na','nt','nr'])
 # graph.edges(row['tech'], row['algo'])
 
 
