@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
 import graphviz
+import random
 
-
+# r = list(range(8))
+# random.shuffle(r)
 # Create a graphlib graph object
 graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 
@@ -12,23 +14,50 @@ graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 #     # graph.node('r', row['ref'])
 #     # graph.node('t', row['tech'])
 row = st.session_state['df_result']['name']
-graph.node('A', row[0])
-graph.node('B', row[1])
-graph.node('C', row[2])
-graph.node('D', row[3])
+
+def addnode(x,y):
+    return graph.node(x,y)
+
+def addedge(a,b):
+    h= random.shuffle(a)
+    o= random.shuffle(b)
+    output = [x+y for x in h for y in o]
+    # print(output)
+    return graph.edges(output)
 
 
-tech = st.session_state['df_result']['tech']
-graph.node('q', tech[0])
-graph.node('w', tech[1])
-graph.node('e', tech[2])
-graph.node('r', tech[3])
 
-for index, dfe in st.session_state['df_result'].iterrows(): 
-    graph.node('a', dfe['algo'])
+lst = ['A','B','C','D','q','w','e','r']
+random.shuffle(lst)
+for i in lst:
+    addnode(str(lst[i]), row[i])
 
 
-graph.edges(['Aa','Ba','Ca','Da','qA','wA','eC','Da','AD','AR'])
+list1 = ['A','B','C','D']
+list2 = ['q','w','e','r']
+
+for i in range(9):
+    addedge(list1,list2)
+
+
+
+# graph.node('A', row[0])
+# graph.node('B', row[1])
+# graph.node('C', row[2])
+# graph.node('D', row[3])
+
+
+# tech = st.session_state['df_result']['tech']
+# graph.node('q', tech[0])
+# graph.node('w', tech[1])
+# graph.node('e', tech[2])
+# graph.node('r', tech[3])
+
+# for index, dfe in st.session_state['df_result'].iterrows(): 
+#     graph.node('a', dfe['algo'])
+
+
+# graph.edges(['Aa','Ba','Ca','Da','qA','wA','eC','Da','AD','AR'])
 # graph.node('a', row[4])
     # graph.node('r', row['re'])
 
