@@ -12,15 +12,15 @@ graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 #     # graph.node('r', row['ref'])
 #     # graph.node('t', row['tech'])
 row = st.session_state['df_result']['name']
-graph.node('n0', row[0])
-graph.node('n1', row[1])
-graph.node('n2', row[2])
-graph.node('n3', row[3])
+graph.node('A', row[0])
+graph.node('B', row[1])
+graph.node('C', row[2])
+graph.node('D', row[3])
 
 for index, dfe in st.session_state['df_result'].iterrows(): 
     graph.node('a', dfe['algo'])
 
-graph.edges(['n0a','n1a','n2a','n3a'])
+graph.edges(['Aa','Ba','Ca','Da'])
 # graph.node('a', row[4])
     # graph.node('r', row['re'])
 
