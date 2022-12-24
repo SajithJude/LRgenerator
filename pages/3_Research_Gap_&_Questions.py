@@ -6,6 +6,7 @@ import os
 import pandas as pd
 
 openai.api_key =  os.getenv("APIKEY")
+st.table(st.session_state['df_result'])
 
 try:
     
@@ -54,6 +55,5 @@ try:
     # for link in ink:
 except:
     st.write("No Data, Generate some information in Fetch Information page to add data")
-st.table(st.session_state['df_result'])
 
 
