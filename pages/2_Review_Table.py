@@ -7,10 +7,10 @@ import graphviz
 graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 
 for index, row in st.session_state['df_result'].iterrows(): 
-    graph.node('n', row['name'])
-    graph.node('a', row['algo'])
-    graph.node('r', row['ref'])
-    graph.node('t', row['tech'])
+    graph.node('n', row['name'][index])
+    # graph.node('a', row['algo'])
+    # graph.node('r', row['ref'])
+    # graph.node('t', row['tech'])
 
 
     # graph.node('r', row['re'])
@@ -18,7 +18,7 @@ for index, row in st.session_state['df_result'].iterrows():
 
     
 # graph.edge(row['name'], row['tech'])
-    graph.edges(['na','nt','at'])
+    # graph.edges(['na','nt','at'])
 # graph.edges(row['tech'], row['algo'])
 
 
