@@ -17,10 +17,18 @@ graph.node('B', row[1])
 graph.node('C', row[2])
 graph.node('D', row[3])
 
+
+tech = st.session_state['df_result']['tech']
+graph.node('q', tech[0])
+graph.node('w', tech[1])
+graph.node('e', tech[2])
+graph.node('r', tech[3])
+
 for index, dfe in st.session_state['df_result'].iterrows(): 
     graph.node('a', dfe['algo'])
 
-graph.edges(['Aa','Ba','Ca','Da'])
+
+graph.edges(['Aa','Ba','Ca','Da','qA','wA','eC','Da','AD'])
 # graph.node('a', row[4])
     # graph.node('r', row['re'])
 
