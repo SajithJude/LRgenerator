@@ -7,9 +7,9 @@ import graphviz
 graph = graphviz.Digraph()
 
 for index, row in st.session_state['df_result'].iterrows(): 
-    graph.edge(row['url'], row['ref'])
-    graph.edge(row['url'], row['algo'])
-    graph.edge(row['url'], row['tech'])
+    graph.edge(row['name'], row['ref'])
+    graph.edge(row['url'], row['name'])
+    graph.edge(row['algo'], row['url'])
 
 
 
