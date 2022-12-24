@@ -30,7 +30,7 @@ with st.container():
 
     with text_col:
         st.subheader("Crafted with ❤️ from Jude Sajith")
-        st.write("""Connect with me on LinkedIn for immediate responses
+        st.write("""Connect with me on LinkedIn for quick replies
             """)
         st.markdown("[LinkedIn profile...]https://www.linkedin.com/in/jude-sajith/)")
 
