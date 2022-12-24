@@ -59,7 +59,7 @@ if st.button("generate and add to table") and len(url1)>0:
 
         nam = openai.Completion.create(
         model="text-davinci-002",
-        prompt="Generate a short name with less than 4 words for this publication :" + url1  +" .",
+        prompt="Generate a short name with less than 4 words for this publication :" + url1  +" (include only the name in response).",
         temperature=0.56,
         max_tokens=3600,
         top_p=1,
