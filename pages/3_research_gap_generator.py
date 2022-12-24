@@ -9,7 +9,7 @@ openai.api_key =  os.getenv("APIKEY")
 
 try:
     
-    if st.button("generate Research Gap from Urls in table"):
+    if st.button("gener8 Research Gap/Questions"):
         link = st.session_state['df_result']['url']
         links = ', '.join(link.tolist())
         st.write(links)
