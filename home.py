@@ -9,7 +9,7 @@ import streamlit as st
 # st.sidebar.success("Select a demo above.")
 
 st.markdown("# Genr8NId8")
-st.markdown("## Generate and Ideate Research papers and ideas")
+st.markdown("## Generate your research paper in less than 5 minutes")
 st.markdown("### Input the publication URL and let A.I do the magic")
 st.markdown("""
     
