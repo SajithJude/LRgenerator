@@ -67,7 +67,7 @@ if st.button("generate and add to table") and len(url1)>0:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Novel Contribution")
+        # st.subheader("Novel Contribution")
         with st.expander("View Novel contribution proposed in the publication"):
 
             st.write(contrib.choices[0].text)
@@ -84,7 +84,7 @@ if st.button("generate and add to table") and len(url1)>0:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Literature Review on Novel Contribution")
+        # st.subheader("Literature Review on Novel Contribution")
         with st.expander("View Literature Review about Novel Contribution"):
         
             st.write(lrd.choices[0].text)
@@ -101,7 +101,7 @@ if st.button("generate and add to table") and len(url1)>0:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Havard Reference")
+        # st.subheader("Havard Reference")
         with st.expander("View Citation (Havard Format)"):
             st.write(ref.choices[0].text)
         rx = str(ref.choices[0].text)
