@@ -4,7 +4,7 @@ import graphviz
 
 
 # Create a graphlib graph object
-graph = graphviz.Graph()
+graph = graphviz.Graph(node_attr={'shape': 'plaintext'})
 
 for index, row in st.session_state['df_result'].iterrows(): 
     graph.node('n', row['name'])
