@@ -13,12 +13,12 @@ st.markdown("## Generate your research paper in less than 5 minutes")
 st.markdown("### Input the publication URLs and let A.I do the magic")
 st.markdown("""
     
-Click on the Fetch info option on right from the menu, 
-Input the URLS of the publications that revolve around your domain,
-Start with the link that is the most relevant
-Once you click on the generate button click on the titles of the generated content to expand
-Repeat the process with atleast 4 URLS
-Once youre Finished, click on the Review table to access all the generated content together
+####Click on the Fetch info option on right from the menu, 
+####Input the URLS of the publications that revolve around your domain,
+####Start with the link that is the most relevant
+####Once you click on the generate button click on the titles of the generated content to expand
+####Repeat the process with atleast 4 URLS
+####Once youre Finished, click on the Review table to access all the generated content together
 
   Ideate uses advanced A.I algorithms to quickly scan and analyze the given URL and generate clear and concise reports. 
   The reports are tailored to deliver easy-to-understand summaries of the research,
