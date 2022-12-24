@@ -31,8 +31,8 @@ list2 = ['q','w','e','r']
 
 lst = ['A','B','C','D','q','w','e','r']
 random.shuffle(lst)
-for i in range(len(lst)):
-    addnode(lst[i], row[i])
+for i in range(len(list1)):
+    addnode(str(lst[i]), row[i])
 
 
 
