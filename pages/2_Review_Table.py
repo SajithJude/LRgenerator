@@ -18,12 +18,16 @@ row = st.session_state['df_result']['name']
 def addnode(x,y):
     return graph.node(x,y)
 
+list3=[]
 def addedge(a,b):
-    h= random.shuffle(a)
-    o= random.shuffle(b)
-    output = [x+y for x in h for y in o]
+    for i in range(len(a)):
+        h= random.choice(a)
+        o= random.choice(b)
+        string=h+o
+        list3.append(string)
+    # output = [x+y for x in h for y in o]
     # print(output)
-    return graph.edges(output)
+    return graph.edges(list3)
 
 list1 = ['A','B','C','D']
 list2 = ['q','w','e','r']
