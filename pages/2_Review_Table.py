@@ -4,12 +4,18 @@ import graphviz
 
 
 # Create a graphlib graph object
-graph = graphviz.Graph(node_attr={'shape': 'plaintext'})
+graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 
 for index, row in st.session_state['df_result'].iterrows(): 
     graph.node('n', row['name'])
     graph.node('a', row['algo'])
-    graph.node('t', row['ref'])
+    graph.node('r', row['ref'])
+    graph.node('t',label='''<<TABLE>
+ <TR>
+   {{st.session_state['df_result']['url']}}
+ </TR>
+</TABLE>>''')
+
 
     # graph.node('r', row['re'])
 
