@@ -6,11 +6,11 @@ import graphviz
 # Create a graphlib graph object
 graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 
-for index, row in st.session_state['df_result'].iterrows(): 
-    graph.node('n', row['name'])
-    graph.node('a', row['algo'])
-    graph.node('r', row['ref'])
-    graph.node('t', row['tech'])
+for index, row in st.session_state['df_result']['name'].iterrows(): 
+    graph.node('n'+str(index), row['name'])
+    # graph.node('a', row['algo'])
+    # graph.node('r', row['ref'])
+    # graph.node('t', row['tech'])
 
 
     # graph.node('r', row['re'])
