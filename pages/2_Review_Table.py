@@ -38,7 +38,8 @@ random.shuffle(lst)
 for i in range(len(list1)):
     # for j in range(len(list2))
     addnode(str(list1[i]), row[i])
-
+for index, row in st.session_state['df_result'].iterrows():
+     addnode(str(list1[index]), row['algo'])
 
 
 
