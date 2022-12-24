@@ -13,7 +13,7 @@ st.markdown("## Generate your research paper in less than 5 minutes")
 st.markdown("### Input the publication URL and let A.I do the magic")
 st.markdown("""
     
-This tool extracts information from the given URL for novel contributions, 
+Click on the Fetch inform, 
 technologies used, algorithm/methodology used and also generates literature reviews.
  It allows users to quickly evaluate the research presented
   and identify possible research gaps without the need to manually source and read through the content. 
