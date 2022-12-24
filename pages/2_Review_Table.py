@@ -10,11 +10,7 @@ for index, row in st.session_state['df_result'].iterrows():
     graph.node('n', row['name'])
     graph.node('a', row['algo'])
     graph.node('r', row['ref'])
-    graph.node('t',label='''<<TABLE>
- <TR>
-   st.session_state['df_result']['url']
- </TR>
-</TABLE>>''')
+    graph.node('t', row['tech'])
 
 
     # graph.node('r', row['re'])
@@ -22,7 +18,7 @@ for index, row in st.session_state['df_result'].iterrows():
 
     
 # graph.edge(row['name'], row['tech'])
-graph.edges(['na','nt'])
+graph.edges(['na','nt','nr'])
 # graph.edges(row['tech'], row['algo'])
 
 
