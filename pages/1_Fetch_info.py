@@ -142,9 +142,10 @@ if st.button("generate and add to table") and len(url1)>0:
         df_addrow = pd.DataFrame([[nx,url1,x,cx,lx,rx,tx]], columns=['name','url', 'algo','contrib','LR','ref','tech'])
         st.session_state['df_result'] = st.session_state['df_result'].append(df_addrow, ignore_index=True)
     else:
-        st.header("You have finished your Free trial, Click on the review table menu to access your results .")
-        st.subheader("Contact Me to extend your usage")
+        st.header("You have finished your Free trial, Click on the Research Gap & Questions menu for the cool part.")
 
+
+st.subheader("You can acccess the generated information in the table shown bellow ")
 st.session_state['df_result']
 
     # df['url'].append(url1)

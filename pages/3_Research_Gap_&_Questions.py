@@ -51,6 +51,8 @@ try:
         with st.expander("View Research Questions"):
             st.write(qus.choices[0].text)
 
+        st.header("That was good start, now click on SRS Generator to spice things up a bit ")
+
     # for link in ink:
 except:
     st.write("No Data, Generate some information in Fetch Information page to add data")
