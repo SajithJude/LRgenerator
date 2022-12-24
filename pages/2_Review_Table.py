@@ -37,10 +37,10 @@ lst = ['A','B','C','D','q','w','e','r']
 random.shuffle(lst)
 for i in range(len(list1)):
     addnode(str(lst[i]), row[i])
-
-
-for index, row in st.session_state['df_result'].iterrows(): 
     addnode(str(list2[i]), row['name'])
+
+# for index, row in st.session_state['df_result'].iterrows(): 
+#     addnode(str(list2[i]), row['name'])
 
 # for i in range(4):
 #     addedge(list1,list2)
