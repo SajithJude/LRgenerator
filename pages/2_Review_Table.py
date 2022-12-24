@@ -13,7 +13,7 @@ for index, row in st.session_state['df_result'].iterrows():
 
     
 # graph.edge(row['name'], row['tech'])
-graph.edges(['na','an'])
+graph.edge('n','a')
 # graph.edges(row['tech'], row['algo'])
 
 
