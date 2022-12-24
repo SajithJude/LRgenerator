@@ -6,8 +6,8 @@ import graphviz
 # Create a graphlib graph object
 graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 
-for index, row in st.session_state['df_result']['name'].iterrows(): 
-    graph.node('n'+str(index), row)
+for index in st.session_state['df_result']['name'].iteritems(): 
+    graph.node(index, st.session_state['df_result']['name'])
     # graph.node('a', row['algo'])
     # graph.node('r', row['ref'])
     # graph.node('t', row['tech'])
