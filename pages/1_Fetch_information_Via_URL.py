@@ -124,7 +124,7 @@ if st.button("generate and add to table") and len(url1)>0:
 
         tech = openai.Completion.create(
         model="text-davinci-002",
-        prompt="What are the tools and technologies used this publication :" + url1  +"(include respones as short points) .",
+        prompt="What are the tools and technologies used this publication :" + url1  +"(include only short points in response) .",
         temperature=0.56,
         max_tokens=3600,
         top_p=1,
