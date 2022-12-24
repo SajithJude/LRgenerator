@@ -6,7 +6,6 @@ import os
 import pandas as pd
 
 openai.api_key =  os.getenv("APIKEY")
-st.table(st.session_state['df_result'])
 
 try:
     
