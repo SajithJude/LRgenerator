@@ -41,7 +41,7 @@ for i in range(len(list1)):
 
 
 
-for i in range(9):
+for i in range(4):
     addedge(list1,list2)
 
 
