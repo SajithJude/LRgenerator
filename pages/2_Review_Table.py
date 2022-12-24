@@ -28,7 +28,7 @@ for index, dfe in st.session_state['df_result'].iterrows():
     graph.node('a', dfe['algo'])
 
 
-graph.edges(['Aa','Ba','Ca','Da','qA','wA','eC','Da','AD'])
+graph.edges(['Aa','Ba','Ca','Da','qA','wA','eC','Da','AD','AR'])
 # graph.node('a', row[4])
     # graph.node('r', row['re'])
 
