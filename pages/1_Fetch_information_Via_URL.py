@@ -51,8 +51,10 @@ if st.button("generate and add to table") and len(url1)>0:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Älgorithms")
-        st.write(response.choices[0].text)
+        # st.subheader("Älgorithms")
+        with st.expander("View Algorithms used in publication"):
+
+            st.write(response.choices[0].text)
         x = str(response.choices[0].text)
 
         contrib = openai.Completion.create(
@@ -66,8 +68,9 @@ if st.button("generate and add to table") and len(url1)>0:
         # stop=["\n"]
         )
         st.subheader("Novel Contribution")
+        with st.expander("View Novel contribution proposed in the publication"):
 
-        st.write(contrib.choices[0].text)
+            st.write(contrib.choices[0].text)
         cx = str(contrib.choices[0].text)
 
 
@@ -82,7 +85,9 @@ if st.button("generate and add to table") and len(url1)>0:
         # stop=["\n"]
         )
         st.subheader("Literature Review on Novel Contribution")
-        st.write(lrd.choices[0].text)
+        with st.expander("View Literature Review about Novel Contribution"):
+        
+            st.write(lrd.choices[0].text)
         lx = str(lrd.choices[0].text)
         # st.write(response)
 
@@ -97,7 +102,8 @@ if st.button("generate and add to table") and len(url1)>0:
         # stop=["\n"]
         )
         st.subheader("Havard Reference")
-        st.write(ref.choices[0].text)
+        with st.expander("View Citation (Havard Format)"):
+            st.write(ref.choices[0].text)
         rx = str(ref.choices[0].text)
 
         tech = openai.Completion.create(
