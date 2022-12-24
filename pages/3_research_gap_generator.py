@@ -28,7 +28,27 @@ try:
         st.subheader("Research Gap")
         st.write(gap.choices[0].text)
         # x = str(gap.choices[0].text)
-    # for link in links:
+        if st.button("generate research questions"):
+            # link = st.session_state['df_result']['url']
+            # links = ', '.join(link.tolist())
+            # st.write(ink)
+            ink = gap.choices[0].text
+        # st.session_state['max_tries']  = st.session_state['max_tries']  -1
+        # if st.session_state['max_tries'] >0:
+            gap = openai.Completion.create(
+            model="text-davinci-002",
+            prompt="Generate 10 research questions for the following research gap :" + ink,
+            temperature=0.86,
+            max_tokens=3600,
+            top_p=1,
+            frequency_penalty=0.35,
+            presence_penalty=0,
+            # stop=["\n"]
+            )
+            st.subheader("Research Questions")
+            st.write(gap.choices[0].text)
+
+    # for link in ink:
 
 except:
     st.write("No Data, Generate some information in Fetch Information page to add data")
