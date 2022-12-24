@@ -26,19 +26,7 @@ try:
 
 
 
-        iq = openai.Completion.create(
-        model="text-davinci-002",
-        prompt="Generate 10 interview questions to ask from Domain experts for the software that does the following :" + links,
-        temperature=0.86,
-        max_tokens=3600,
-        top_p=1,
-        frequency_penalty=0.35,
-        presence_penalty=0,
-        # stop=["\n"]
-        )
-        # st.subheader("/")
-        with st.expander("View Interview Questions for Domain Experts"):
-            st.write(iq.choices[0].text)    
+         
 
         nfr = openai.Completion.create(
         model="text-davinci-002",
@@ -69,6 +57,20 @@ try:
         with st.expander("View Stakeholders Information"):
 
             st.write(sthl.choices[0].text)
+
+        iq = openai.Completion.create(
+        model="text-davinci-002",
+        prompt="Generate 10 interview questions to ask from potential users for the software that does the following :" + links,
+        temperature=0.86,
+        max_tokens=3600,
+        top_p=1,
+        frequency_penalty=0.35,
+        presence_penalty=0,
+        # stop=["\n"]
+        )
+        # st.subheader("/")
+        with st.expander("View Interview Questions for Potential Users"):
+            st.write(iq.choices[0].text)   
         # x = str(gap.choices[0].text)
     # for link in links:
 
