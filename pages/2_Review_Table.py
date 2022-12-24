@@ -13,14 +13,14 @@ graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 #     # graph.node('a', row['algo'])
 #     # graph.node('r', row['ref'])
 #     # graph.node('t', row['tech'])
-row = st.session_state['df_result']['name']
+row = st.session_state['df_result']
 
 def addnode(x,y):
     return graph.node(x,y)
 
 list3=[]
 def addedge(a,b):
-    for i in range(len(a)/2):
+    for i in range(len(a)):
         h= random.choice(a)
         o= random.choice(b)
         string=h+o
@@ -36,8 +36,8 @@ list2 = ['q','w','e','r']
 lst = ['A','B','C','D','q','w','e','r']
 random.shuffle(lst)
 for i in range(len(list1)):
-    for j in range(len(list2)):
-        addnode(str(list1[i]), row[j])
+    # for j in range(len(list2))
+    addnode(str(list1[i]), row[i])
 
 
 
