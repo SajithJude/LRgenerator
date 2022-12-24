@@ -129,6 +129,7 @@ if st.button("generate and add to table") and len(url1)>0:
         st.header("You have finished your Free trial, Click on the review table menu to access your results .")
         st.subheader("Contact Me to extend your usage")
 
+st.table(st.session_state['df_result'])
 
     # df['url'].append(url1)
     # df['algo'] = str(response.choices[0].text)
