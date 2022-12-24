@@ -12,7 +12,7 @@ for index, row in st.session_state['df_result'].iterrows():
     graph.node('r', row['ref'])
     graph.node('t',label='''<<TABLE>
  <TR>
-   {{st.session_state['df_result']['url']}}
+   st.session_state['df_result']['url']
  </TR>
 </TABLE>>''')
 
