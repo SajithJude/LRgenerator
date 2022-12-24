@@ -27,7 +27,7 @@ for index, row in st.session_state['df_result'].iterrows():
 # graph.edge('new', 'runmem')
 # graph.edge('sleep', 'runmem')
 
-st.graphviz_chart(graph)
+st.graphviz_chart(graph,use_container_width=True)
 
 try:
     st.table(st.session_state['df_result'])
