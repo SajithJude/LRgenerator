@@ -25,16 +25,16 @@ def addedge(a,b):
     # print(output)
     return graph.edges(output)
 
-
+list1 = ['A','B','C','D']
+list2 = ['q','w','e','r']
 
 lst = ['A','B','C','D','q','w','e','r']
 random.shuffle(lst)
 for i in lst:
-    addnode(str(lst[i]), row[i])
+    addnode(lst[i], row[i])
 
 
-list1 = ['A','B','C','D']
-list2 = ['q','w','e','r']
+
 
 for i in range(9):
     addedge(list1,list2)
