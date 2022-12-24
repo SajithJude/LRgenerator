@@ -10,7 +10,7 @@ import streamlit as st
 
 st.markdown("# Genr8NId8")
 st.markdown("## Generate your research paper in less than 5 minutes")
-st.markdown("### Input the publication URLs and let A.I do the magic")
+st.markdown("##Input the publication URLs and let A.I do the magic")
 st.markdown("""
     
 #### Click on the Fetch info option on right from the menu, 
