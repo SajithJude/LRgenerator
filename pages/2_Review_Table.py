@@ -9,7 +9,7 @@ graph = graphviz.Graph()
 for index, row in st.session_state['df_result'].iterrows(): 
     graph.node('n', row['name'])
     graph.node('a', row['algo'])
-    graph.node('t', row['tech'])
+    graph.node('t', row['ref'])
 
     # graph.node('r', row['re'])
 
