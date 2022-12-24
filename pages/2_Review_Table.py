@@ -28,9 +28,10 @@ def addedge(a,b):
 list1 = ['A','B','C','D']
 list2 = ['q','w','e','r']
 
+
 lst = ['A','B','C','D','q','w','e','r']
 random.shuffle(lst)
-for i in lst:
+for i in range(len(lst)):
     addnode(lst[i], row[i])
 
 
