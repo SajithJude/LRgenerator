@@ -16,6 +16,10 @@ graph.node('n0', row[0])
 graph.node('n1', row[1])
 graph.node('n2', row[2])
 graph.node('n3', row[3])
+for index, row in st.session_state['df_result'].iterrows(): 
+    graph.node('a', row['algo'])
+
+graph.edges(['n0a','n1a','n2a','n3a'])
 # graph.node('a', row[4])
     # graph.node('r', row['re'])
 
