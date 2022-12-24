@@ -1,11 +1,28 @@
 import streamlit as st
-# import pandas
+import pandas as pd
+# import graphviz
 
-# df = pd.DataFrame(columns=['url', 'algo','contrib','LR','ref','tech'])
-# st.text("#adjust the slider  to fine tune the number of questions you want in the output")
-# if "df_result" not in st.session_state:
-#         st.session_state['df_result'] = df
-  
+for index, row in st.session_state['df_result'].iterrows(): 
+    st.write(row['url'], row['ref'])
+# Create a graphlib graph object
+# graph = graphviz.Digraph()
+
+# graph.edge('run', 'intr')
+# graph.edge('intr', 'runbl')
+# graph.edge('runbl', 'run')
+# graph.edge('run', 'kernel')
+# graph.edge('kernel', 'zombie')
+# graph.edge('kernel', 'sleep')
+# graph.edge('kernel', 'runmem')
+# graph.edge('sleep', 'swap')
+# graph.edge('swap', 'runswap')
+# graph.edge('runswap', 'new')
+# graph.edge('runswap', 'runmem')
+# graph.edge('new', 'runmem')
+# graph.edge('sleep', 'runmem')
+
+# st.graphviz_chart(graph)
+
 try:
     st.table(st.session_state['df_result'])
 except:
