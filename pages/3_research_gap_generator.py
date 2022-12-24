@@ -35,7 +35,7 @@ try:
             ink = gap.choices[0].text
         # st.session_state['max_tries']  = st.session_state['max_tries']  -1
         # if st.session_state['max_tries'] >0:
-            gap = openai.Completion.create(
+            qus = openai.Completion.create(
             model="text-davinci-002",
             prompt="Generate 10 research questions for the following research gap :" + ink,
             temperature=0.86,
@@ -46,7 +46,7 @@ try:
             # stop=["\n"]
             )
             st.subheader("Research Questions")
-            st.write(gap.choices[0].text)
+            st.write(qus.choices[0].text)
 
     # for link in ink:
 
