@@ -116,8 +116,10 @@ if st.button("generate and add to table") and len(url1)>0:
         presence_penalty=0,
         # stop=["\n"]
         )
-        st.subheader("Tools and Technologies")
-        st.write(tech.choices[0].text)
+        # st.subheader("Tools and Technologies")
+        with st.expander("View Tools and Technologies Used"):
+
+            st.write(tech.choices[0].text)
         tx = str(tech.choices[0].text)
 
         
