@@ -8,7 +8,7 @@ import pandas as pd
 openai.api_key =  os.getenv("APIKEY")
 
 try:
-    links = st.text_area("Describe how will your software will be used by an end user")
+    links = st.text_area("Describe how will your software will be used by an end user", placeholder="Eg: An app that enables the users to...")
     if st.button("generate Functional/Non-Functional Requirements"):
         # link = st.session_state['df_result']['url']
         # links = ', '.join(link.tolist())
@@ -46,6 +46,6 @@ try:
     # for link in links:
 
 except:
-    st.write("No Data, Generate some information in Fetch Information page to add data")
+    st.write("An Error occurred")
 
 
