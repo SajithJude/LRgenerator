@@ -6,6 +6,8 @@ import openai
 
 import streamlit as st
 
+st.sidebar.success("Select a demo above.")
+
 st.markdown("# Jude Sajith")
 st.markdown("## Pythonista")
 st.markdown("""
