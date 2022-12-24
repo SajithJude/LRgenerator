@@ -7,7 +7,7 @@ import graphviz
 graph = graphviz.Digraph(node_attr={'shape': 'plaintext'})
 
 for index in st.session_state['df_result'].iteritems(): 
-    graph.node(index, st.session_state['df_result']['name'][index])
+    graph.node(index, st.session_state['df_result']['name'])
     # graph.node('a', row['algo'])
     # graph.node('r', row['ref'])
     # graph.node('t', row['tech'])
