@@ -6,7 +6,7 @@ import openai
 
 import streamlit as st
 
-st.sidebar.success("Select a demo above.")
+# st.sidebar.success("Select a demo above.")
 
 st.markdown("# Genr8NId8")
 st.markdown("## Generate and Ideate Research papers and ideas")
