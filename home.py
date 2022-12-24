@@ -23,16 +23,16 @@ technologies used, algorithm/methodology used and also generates literature revi
    and business professionals who require quick and reliable evaluation of research content.
 """)
 
-# with st.container():
-#     image_col, text_col = st.columns((1,2))
-#     with image_col:
-#         st.image("https://cdn-images-1.medium.com/max/906/1*dVSDol9pouoO9IX_E_-35Q.png")
+with st.container():
+    image_col, text_col = st.columns((1,2))
+    with image_col:
+        st.image("https://aeiljuispo.cloudimg.io/v7/https://s3.amazonaws.com/moonup/production/uploads/1665676037566-noauth.jpeg?w=200&h=200&f=face")
 
-#     with text_col:
-#         st.subheader("A Multi-page Interactive Dashboard with Streamlit and Plotly")
-#         st.write("""Beautiful interactive multipage dashboards are made easy with Streamlit
-#             """)
-#         st.markdown("[Read more...](https://towardsdatascience.com/a-multi-page-interactive-dashboard-with-streamlit-and-plotly-c3182443871a)")
+    with text_col:
+        st.subheader("Crafted with ❤️ from Jude Sajith")
+        st.write("""Connect with me on LinkedIn for immediate responses
+            """)
+        st.markdown("[LinkedIn profile...]https://www.linkedin.com/in/jude-sajith/)")
 
 # with st.container():
 #     image_col, text_col = st.columns((1,2))
