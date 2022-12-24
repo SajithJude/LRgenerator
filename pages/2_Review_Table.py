@@ -39,10 +39,11 @@ for i in range(len(list1)):
     addnode(str(lst[i]), row[i])
 
 
+for index, row in st.session_state['df_result'].iterrows(): 
+    graph.node('n', row['name'])
 
-
-for i in range(4):
-    addedge(list1,list2)
+# for i in range(4):
+#     addedge(list1,list2)
 
 
 
