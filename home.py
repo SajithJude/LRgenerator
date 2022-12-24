@@ -20,7 +20,7 @@ Once you click on the generate button click on the titles of the generated conte
 Repeat the process with atleast 4 URLS
 Once youre Finished, click on the Review table to access all the generated content together
 
-  It uses advanced algorithms to quickly scan and analyze the given URL and generate clear and concise reports. 
+  Ideate uses advanced A.I algorithms to quickly scan and analyze the given URL and generate clear and concise reports. 
   The reports are tailored to deliver easy-to-understand summaries of the research,
    allowing users to quickly gain insights. It is useful for researchers, academics, 
    and business professionals who require quick and reliable evaluation of research content.
